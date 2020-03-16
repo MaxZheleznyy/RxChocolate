@@ -8,22 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		50217078241FEDA600BF423B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217077241FEDA600BF423B /* AppDelegate.swift */; };
-		5021707A241FEDA600BF423B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217079241FEDA600BF423B /* SceneDelegate.swift */; };
-		5021707C241FEDA600BF423B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021707B241FEDA600BF423B /* ViewController.swift */; };
+		5021707C241FEDA600BF423B /* ChocolatesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021707B241FEDA600BF423B /* ChocolatesListViewController.swift */; };
 		5021707F241FEDA600BF423B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5021707D241FEDA600BF423B /* Main.storyboard */; };
 		50217081241FEDA600BF423B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50217080241FEDA600BF423B /* Assets.xcassets */; };
 		50217084241FEDA600BF423B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50217082241FEDA600BF423B /* LaunchScreen.storyboard */; };
+		5021708C241FF6B900BF423B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021708B241FF6B900BF423B /* StringExtension.swift */; };
+		5021708E241FF6E500BF423B /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021708D241FF6E500BF423B /* DateExtension.swift */; };
+		50217091241FF99000BF423B /* Chocolate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217090241FF99000BF423B /* Chocolate.swift */; };
+		50217093241FFA1C00BF423B /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217092241FFA1C00BF423B /* ShoppingCart.swift */; };
+		50217095241FFA4000BF423B /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217094241FFA4000BF423B /* CurrencyFormatter.swift */; };
+		50217099241FFA6A00BF423B /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217098241FFA6A00BF423B /* ImageName.swift */; };
+		5021709C241FFABC00BF423B /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021709B241FFABC00BF423B /* SegueHandler.swift */; };
+		5021709E241FFAF900BF423B /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021709D241FFAF900BF423B /* CardType.swift */; };
+		507BB4C6241FFBBA00416110 /* ChocolateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4C5241FFBBA00416110 /* ChocolateCell.swift */; };
+		507BB4C8241FFBD100416110 /* ChocolateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4C7241FFBD100416110 /* ChocolateButton.swift */; };
+		507BB4CA241FFBE500416110 /* ValidatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4C9241FFBE500416110 /* ValidatingTextField.swift */; };
+		507BB4CD2420039800416110 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4CC2420039800416110 /* CartViewController.swift */; };
+		507BB4CF242003D000416110 /* ChocolateIsComingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4CE242003D000416110 /* ChocolateIsComingViewController.swift */; };
+		507BB4D12420071F00416110 /* BillingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4D02420071F00416110 /* BillingInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50217074241FEDA600BF423B /* RxChocolate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxChocolate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50217077241FEDA600BF423B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		50217079241FEDA600BF423B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5021707B241FEDA600BF423B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5021707B241FEDA600BF423B /* ChocolatesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolatesListViewController.swift; sourceTree = "<group>"; };
 		5021707E241FEDA600BF423B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50217080241FEDA600BF423B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50217083241FEDA600BF423B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50217085241FEDA600BF423B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5021708B241FF6B900BF423B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		5021708D241FF6E500BF423B /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		50217090241FF99000BF423B /* Chocolate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chocolate.swift; sourceTree = "<group>"; };
+		50217092241FFA1C00BF423B /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		50217094241FFA4000BF423B /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		50217098241FFA6A00BF423B /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
+		5021709B241FFABC00BF423B /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		5021709D241FFAF900BF423B /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		507BB4C5241FFBBA00416110 /* ChocolateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateCell.swift; sourceTree = "<group>"; };
+		507BB4C7241FFBD100416110 /* ChocolateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateButton.swift; sourceTree = "<group>"; };
+		507BB4C9241FFBE500416110 /* ValidatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatingTextField.swift; sourceTree = "<group>"; };
+		507BB4CC2420039800416110 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		507BB4CE242003D000416110 /* ChocolateIsComingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateIsComingViewController.swift; sourceTree = "<group>"; };
+		507BB4D02420071F00416110 /* BillingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +83,67 @@
 			isa = PBXGroup;
 			children = (
 				50217077241FEDA600BF423B /* AppDelegate.swift */,
-				50217079241FEDA600BF423B /* SceneDelegate.swift */,
-				5021707B241FEDA600BF423B /* ViewController.swift */,
+				507BB4D22420156C00416110 /* Controllers */,
+				507BB4CB241FFBED00416110 /* Views */,
+				5021709A241FFA8E00BF423B /* Models */,
+				507BB4C4241FFB9600416110 /* Protocols */,
+				5021708F241FF97600BF423B /* Extensions */,
 				5021707D241FEDA600BF423B /* Main.storyboard */,
-				50217080241FEDA600BF423B /* Assets.xcassets */,
 				50217082241FEDA600BF423B /* LaunchScreen.storyboard */,
+				50217080241FEDA600BF423B /* Assets.xcassets */,
 				50217085241FEDA600BF423B /* Info.plist */,
 			);
 			path = RxChocolate;
+			sourceTree = "<group>";
+		};
+		5021708F241FF97600BF423B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5021708B241FF6B900BF423B /* StringExtension.swift */,
+				5021708D241FF6E500BF423B /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5021709A241FFA8E00BF423B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50217090241FF99000BF423B /* Chocolate.swift */,
+				50217092241FFA1C00BF423B /* ShoppingCart.swift */,
+				50217094241FFA4000BF423B /* CurrencyFormatter.swift */,
+				5021709D241FFAF900BF423B /* CardType.swift */,
+				50217098241FFA6A00BF423B /* ImageName.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		507BB4C4241FFB9600416110 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5021709B241FFABC00BF423B /* SegueHandler.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		507BB4CB241FFBED00416110 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				507BB4C5241FFBBA00416110 /* ChocolateCell.swift */,
+				507BB4C7241FFBD100416110 /* ChocolateButton.swift */,
+				507BB4C9241FFBE500416110 /* ValidatingTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		507BB4D22420156C00416110 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5021707B241FEDA600BF423B /* ChocolatesListViewController.swift */,
+				507BB4CC2420039800416110 /* CartViewController.swift */,
+				507BB4D02420071F00416110 /* BillingInfoViewController.swift */,
+				507BB4CE242003D000416110 /* ChocolateIsComingViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +217,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5021707C241FEDA600BF423B /* ViewController.swift in Sources */,
+				5021708C241FF6B900BF423B /* StringExtension.swift in Sources */,
+				50217093241FFA1C00BF423B /* ShoppingCart.swift in Sources */,
+				507BB4CD2420039800416110 /* CartViewController.swift in Sources */,
+				50217091241FF99000BF423B /* Chocolate.swift in Sources */,
+				5021709E241FFAF900BF423B /* CardType.swift in Sources */,
+				507BB4CF242003D000416110 /* ChocolateIsComingViewController.swift in Sources */,
+				507BB4D12420071F00416110 /* BillingInfoViewController.swift in Sources */,
+				50217099241FFA6A00BF423B /* ImageName.swift in Sources */,
+				5021708E241FF6E500BF423B /* DateExtension.swift in Sources */,
+				5021707C241FEDA600BF423B /* ChocolatesListViewController.swift in Sources */,
+				5021709C241FFABC00BF423B /* SegueHandler.swift in Sources */,
+				507BB4C6241FFBBA00416110 /* ChocolateCell.swift in Sources */,
+				50217095241FFA4000BF423B /* CurrencyFormatter.swift in Sources */,
+				507BB4C8241FFBD100416110 /* ChocolateButton.swift in Sources */,
 				50217078241FEDA600BF423B /* AppDelegate.swift in Sources */,
-				5021707A241FEDA600BF423B /* SceneDelegate.swift in Sources */,
+				507BB4CA241FFBE500416110 /* ValidatingTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
