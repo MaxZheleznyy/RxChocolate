@@ -20,6 +20,7 @@
 		50217099241FFA6A00BF423B /* ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50217098241FFA6A00BF423B /* ImageName.swift */; };
 		5021709C241FFABC00BF423B /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021709B241FFABC00BF423B /* SegueHandler.swift */; };
 		5021709E241FFAF900BF423B /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5021709D241FFAF900BF423B /* CardType.swift */; };
+		5078AA8D2420184A00A176DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5078AA8C2420184A00A176DD /* SceneDelegate.swift */; };
 		507BB4C6241FFBBA00416110 /* ChocolateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4C5241FFBBA00416110 /* ChocolateCell.swift */; };
 		507BB4C8241FFBD100416110 /* ChocolateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4C7241FFBD100416110 /* ChocolateButton.swift */; };
 		507BB4CA241FFBE500416110 /* ValidatingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507BB4C9241FFBE500416110 /* ValidatingTextField.swift */; };
@@ -46,6 +47,7 @@
 		50217098241FFA6A00BF423B /* ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageName.swift; sourceTree = "<group>"; };
 		5021709B241FFABC00BF423B /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		5021709D241FFAF900BF423B /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		5078AA8C2420184A00A176DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		507BB4C5241FFBBA00416110 /* ChocolateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateCell.swift; sourceTree = "<group>"; };
 		507BB4C7241FFBD100416110 /* ChocolateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChocolateButton.swift; sourceTree = "<group>"; };
 		507BB4C9241FFBE500416110 /* ValidatingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatingTextField.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				50217077241FEDA600BF423B /* AppDelegate.swift */,
+				5078AA8C2420184A00A176DD /* SceneDelegate.swift */,
 				507BB4D22420156C00416110 /* Controllers */,
 				507BB4CB241FFBED00416110 /* Views */,
 				5021709A241FFA8E00BF423B /* Models */,
@@ -235,6 +238,7 @@
 				5021709E241FFAF900BF423B /* CardType.swift in Sources */,
 				507BB4CF242003D000416110 /* ChocolateIsComingViewController.swift in Sources */,
 				507BB4D12420071F00416110 /* BillingInfoViewController.swift in Sources */,
+				5078AA8D2420184A00A176DD /* SceneDelegate.swift in Sources */,
 				50217099241FFA6A00BF423B /* ImageName.swift in Sources */,
 				5021708E241FF6E500BF423B /* DateExtension.swift in Sources */,
 				5021707C241FEDA600BF423B /* ChocolatesListViewController.swift in Sources */,
