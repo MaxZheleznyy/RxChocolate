@@ -7,26 +7,24 @@
 //
 
 import UIKit
+import RxSwift
 
 class ChocolatesListViewController: UIViewController {
     @IBOutlet weak var cartButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     
     let europeanChocolates = Chocolate.ofEurope
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Chocolate!!!"
         
+        setupCartObserver()
+        
         tableView.dataSource = self
         tableView.delegate = self
-    }
-        
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        updateCartButton()
     }
 }
 
@@ -53,15 +51,18 @@ extension ChocolatesListViewController: UITableViewDataSource, UITableViewDelega
         tableView.deselectRow(at: indexPath, animated: true)
         
         let chocolate = europeanChocolates[indexPath.row]
-        ShoppingCart.sharedCart.chocolates.append(chocolate)
-        updateCartButton()
+        let freshValue = ShoppingCart.sharedCart.chocolates.value + [chocolate]
+        ShoppingCart.sharedCart.chocolates.accept(freshValue)
     }
 }
 
-//MARK: - Imperative methods
+// MARK: - Rx configuration
 extension ChocolatesListViewController {
-    func updateCartButton() {
-        cartButton.title = "\(ShoppingCart.sharedCart.chocolates.count) 🍫"
+    func setupCartObserver() {
+      ShoppingCart.sharedCart.chocolates.asObservable().subscribe(onNext: { [unowned self] chocolates in
+          self.cartButton.title = "\(chocolates.count) 🍫"
+        })
+        .disposed(by: disposeBag)
     }
 }
 

@@ -17,7 +17,6 @@ class BillingInfoViewController: UIViewController {
     @IBOutlet weak var cvvTextField: ValidatingTextField!
     @IBOutlet weak var purchaseButton: ChocolateButton!
     
-    
     private let cardType: BehaviorRelay<CardType> = BehaviorRelay(value: .unknown)
     
     override func viewDidLoad() {
