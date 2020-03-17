@@ -28,8 +28,6 @@ class ValidatingTextField: UITextField {
   
   private func configureForValid() {
     if !valid && hasBeenExited {
-      //Only color the background if the user has tried to
-      //input things at least once.
       backgroundColor = .red
     } else {
       backgroundColor = .clear

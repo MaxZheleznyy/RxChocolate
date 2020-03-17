@@ -66,10 +66,7 @@ extension String {
     var isExpirationDateValid: Bool {
         let noSlash = removingSlash
         
-        guard noSlash.count == 6 //Must be mmyyyy
-          && noSlash.areAllCharactersNumbers else { //must be all numbers
-            return false
-        }
+        guard noSlash.count == 6 && noSlash.areAllCharactersNumbers else { return false }
         
         let index2 = index(startIndex, offsetBy: 2)
         let monthString = prefix(upTo: index2)

@@ -18,11 +18,15 @@ class BillingInfoViewController: UIViewController {
     @IBOutlet weak var purchaseButton: ChocolateButton!
     
     private let cardType: BehaviorRelay<CardType> = BehaviorRelay(value: .unknown)
+    private let throttleIntervalInMilliseconds = 100
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "💳 Info"
+        setupCardImageDisplay()
+        setupTextChangeHandling()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,6 +40,58 @@ class BillingInfoViewController: UIViewController {
             
             destination.cardType = cardType.value
         }
+    }
+}
+
+// MARK: - Rx configuration
+extension BillingInfoViewController {
+    func setupCardImageDisplay() {
+        cardType.asObservable().subscribe(onNext: { [unowned self] cardType in
+          self.creditCardImageView.image = cardType.image
+        })
+        .disposed(by: disposeBag)
+    }
+    
+    func setupTextChangeHandling() {
+        //credit card
+        let creditCardValid = creditCardNumberTextField.rx.text.observeOn(MainScheduler.asyncInstance).distinctUntilChanged()
+            .throttle(.milliseconds(throttleIntervalInMilliseconds), scheduler: MainScheduler.instance).map { [unowned self] in
+                self.validate(cardText: $0)
+        }
+        
+        creditCardValid.subscribe(onNext: { [unowned self] in
+            self.creditCardNumberTextField.valid = $0
+        })
+        .disposed(by: disposeBag)
+        
+        //expiration date
+        let expirationValid = expirationDateTextField.rx.text.observeOn(MainScheduler.asyncInstance).distinctUntilChanged()
+          .throttle(.milliseconds(throttleIntervalInMilliseconds), scheduler: MainScheduler.instance).map { [unowned self] in
+            self.validate(expirationDateText: $0)
+        }
+            
+        expirationValid.subscribe(onNext: { [unowned self] in
+            self.expirationDateTextField.valid = $0
+          })
+          .disposed(by: disposeBag)
+            
+        //cvv code
+        let cvvValid = cvvTextField.rx.text.observeOn(MainScheduler.asyncInstance).distinctUntilChanged().map { [unowned self] in
+            self.validate(cvvText: $0)
+        }
+            
+        cvvValid.subscribe(onNext: { [unowned self] in
+            self.cvvTextField.valid = $0
+        })
+        .disposed(by: disposeBag)
+        
+        //finishing touch
+        let everythingValid = Observable.combineLatest(creditCardValid, expirationValid, cvvValid) {
+            $0 && $1 && $2
+        }
+            
+        everythingValid.bind(to: purchaseButton.rx.isEnabled)
+        .disposed(by: disposeBag)
     }
 }
 
@@ -96,7 +152,7 @@ private extension BillingInfoViewController {
     }
     
     func advanceIfNecessary(expirationNoSpacesOrSlash: String) {
-        if expirationNoSpacesOrSlash.count == 6 { //mmyyyy
+        if expirationNoSpacesOrSlash.count == 6 {
             cvvTextField.becomeFirstResponder()
         }
     }
